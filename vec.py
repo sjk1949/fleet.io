@@ -13,12 +13,12 @@ class Vec:
         return Vec(self.x-other.x,self.y-other.y)
     
     def __mul__(self,other):
-        if(type(other.__name__)=='Vec'):
+        if(type(other).__name__=='Vec'):
             return self.x*other.x+self.y*other.y
         else:
             return Vec(self.x*other,self.y*other)
         
-    def __div__(self,other):
+    def __truediv__(self,other):
         return Vec(self.x/other,self.y/other)
     
     @property
